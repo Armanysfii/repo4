@@ -30,21 +30,20 @@ class InfoExtractor():
         final_list = temp_list.replace(self.remove_closing_tag, "\"")
         return final_list
 
-
 class Links():
-    def __init__(self, url):
-        self.url = url
-
-    def getLinks(self):
+    def __init__(self, ):
+        pass
+    def getLinks(self, url):
         links = list()
-        html_page = req.get(self.url)
+        html_page = req.get(url)
         soup = BeautifulSoup(html_page.content, "html.parser")
         for link in soup.findAll('a', {'class': 'txt upcase bold sanscond fsz17'}):
             links.append(link.get('href'))
         return links
 
-    def get_tables(self):
-        url = "https://www.autoevolution.com/moto/harley-davidson-electra-glide-ultra-classic-1995.html#aeng_harley-davidson-electra-glide-ultra-classic-3000-1337-1"
-        html = req.get(url)
+    def get_tables(self, urll):
+        html = req.get(urll)
         soup = BeautifulSoup(html.content, "html.parser")
-#         TODO get table
+        table = soup.findAll("div", {'class': 'enginedata engine-inline'})
+        # print(table)
+        return table
