@@ -1,0 +1,2 @@
+1 [<em class="nowrap col-black faded" itemprop="vehicleModelDate">1949 - 1952</em>] 
+2 [<em class="nowrap col-black faded" itemprop="vehicleModelDate">1936 - 1941</em>] 

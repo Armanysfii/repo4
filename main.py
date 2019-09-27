@@ -69,22 +69,22 @@ links = [
 
 #### get description of each tech info page
 
-o = InfoExtractor.Links()
-filename = 0
-for model in links:
-    f = 0
-    filename = filename + 1
-    tech_info_links = o.getLinks(model)
-    file = open("model{}.txt".format(filename), "w+")
-    for each_tech_link in tech_info_links:
-        html = req.get(each_tech_link)
-        soup = BeautifulSoup(html.content, "html.parser")
-        result = soup.find_all("div", {"class": "mgbot_20", "itemprop": "description"})
-        f = f + 1
-        print(f, result, "\n")
-        file.write("{} {} \n".format(f, result))
-    file.close()
-    f = 0
+# o = InfoExtractor.Links()
+# filename = 0
+# for model in links:
+#     f = 0
+#     filename = filename + 1
+#     tech_info_links = o.getLinks(model)
+#     file = open("model{}.txt".format(filename), "w+")
+#     for each_tech_link in tech_info_links:
+#         html = req.get(each_tech_link)
+#         soup = BeautifulSoup(html.content, "html.parser")
+#         result = soup.find_all("div", {"class": "mgbot_20", "itemprop": "description"})
+#         f = f + 1
+#         print(f, result, "\n")
+#         file.write("{} {} \n".format(f, result))
+#     file.close()
+#     f = 0
 
 # test = """[<div class="mgbot_20" itemprop="description"><strong class="intro dispblock">The new Harley Davidson Electra Glide motorcycle is equipped with the Milwaukee-Eight 107 engine.</strong> For 2019, the new electronic cruise control system, rear dampers with manually adjustable emulsion technology, a 49 mm front suspension for the Showa valve and Brembo brakes with optional Reflex Linked and <span class="txtglos" data-url="https://www.autoevolution.com/auto-glossary/a.html#ge-antilock-braking-system" title="ABS - click for definition">ABS</span> features. Harley's frame is a double-height / double-swing arrangement of welded sections of light steel tubes. The steering head adjusts the 26-degree rake with a height of 6.7 cm on a 64-inch wheelbase for tracking.</div>]
 # [<div class="mgbot_20" itemprop="description"><strong class="intro dispblock">The MoCo have combined retro cruiser looks with the functionality and comfort of a modern, fully-equipped touring two-wheeler in the embodiment of the 2016 MY Harley Davidson Electra Glide Ultra Classic.</strong> At its heart lies a Twin-Cooled, four stroke, 1690cc, High Output Twin Cam 103 engine paired to a six-speed manual transmission, that reaches its peak torque of 138 Nm at 3750 rpm. <br/>
@@ -95,3 +95,21 @@ for model in links:
 # In every other aspect, it is identical to the base model. It features the dependable High Output Twin Cam 103 engine mated to a six-speed manual transmission, and state-of-the-art technologies such as air-adjustable suspension, Reflex-linked Brembo brakes plus the comfortable, heated two-up seat with lumbar support and pillion armrests.</div>]
 # """
 # print(BeautifulSoup(test, "html.parser").prettify())
+
+
+o = InfoExtractor.Links()
+filename = 0
+for model in links:
+    f = 0
+    filename = filename + 1
+    tech_info_links = o.getLinks(model)
+    file = open("years{}.txt".format(filename), "w+")
+    for each_tech_link in tech_info_links:
+        html = req.get(each_tech_link)
+        soup = BeautifulSoup(html.content, "html.parser")
+        result = soup.find_all("em", {"class": "nowrap col-black faded", "itemprop": "vehicleModelDate"})
+        f = f + 1
+        print(f, result, "\n")
+        file.write("{} {} \n".format(f, result))
+    file.close()
+    f = 0
