@@ -5,10 +5,10 @@ file = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
         35, 36, 37, 38]
 
 for i in file:
-    with open('years/years{}.txt'.format(i), 'r') as reader:
+    with open('toedit/years/years{}.txt'.format(i), 'r') as reader:
         text = reader.read()
         l1 = text.replace('[<em class="nowrap col-black faded" itemprop="vehicleModelDate">', "\"")
         l2 = l1.replace("</em>]", "\",")
-    newfile = open("final/years/years{}.txt".format(i), "w+")
+    newfile = open("final/years/yea{}.csv".format(i), "w+")
     newfile.write("{}".format(l2))
     newfile.close()
