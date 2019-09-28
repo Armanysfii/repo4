@@ -1,0 +1,5 @@
+1 "The 1978 MY Harley Davidson SST 250 has, at its heart, an air-cooled, two-stroke, 242cc, single cylidner powerhouse that was paired to a five-speed manual transmission with a chain final drive. Also, it has been fitted with an oil-damped, Ceriani telescopic front fork, dual Betor shock absorbers as a rear suspension, a dual seat, laced wheels, a chromed exhaust system, wide handlebars and analogue instrumentation dials.", 
+2 "The 1976 MY Harley Davidson SST 350 Sprint has, at its heart, an air-cooled, two-stroke, 341cc, single cylinder powerhouse paired to a five-speed manual transmission with a chain final drive, and can reach a maximum power output of 27 horsepower at 5000 rpm.
+
+
+In addition, it has standard fittings such as a chromed exhaust system, a dual seat, wide handlebars, a round headlight with a chromed nacelle, analogue instrumentation dials, an oil-damped Ceriani telescopic front fork coupled to dual Betor shock absorbers in the rear, a front disc brake coupled to a rear drum and a blacked-out, steel frame.", 
